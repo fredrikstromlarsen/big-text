@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Big Text</title>
+		<script src="main.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+        <div class="size-manager">
+    		<input oninput="showText(this.value, document.getElementById('bigText'), 'calc((100vw - 4rem) / '+this.value.length+')')" placeholder="Type here" id="textInput">
+            <div class="container padding btn-container">
+                <select id=fontFamily" data-property="family" onchange="editProperty(this)">
+                    <option value="monospace" default>monospace</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="serif">serif</option>
+                    <option value="cursive">cursive</option>
+                    <option value="fantasy">fantasy</option>
+                </select>
+                <button data-property="bold" style="background-color: #0a0a0a00" onclick="editProperty(this)"><b>B</b></button>
+                <button data-property="italic" style="background-color: #0a0a0a00" onclick="editProperty(this)"><i>I</i></button>
+                <button data-property="underline" style="background-color: #0a0a0a00" onclick="editProperty(this)"><span class="underline">U</span></button>
+			    <input oninput="showText(this.value + 'px', document.getElementById('bigText'), this.value + 'px')" onmouseup="showText(document.getElementById('textInput').value, document.getElementById('bigText'), 'calc((100vw - 4rem) / '+document.getElementById('textInput').value.length+')')" type="range" min="0" max="400" value="0" id="minSize"/>
+            </div>
+        </div>
+		<div class="container striped" id="bigText" style="font-weight: 400;font-style: normal;text-decoration: none; font-family: monospace;"></div>
+        
+	</body>
+</html>

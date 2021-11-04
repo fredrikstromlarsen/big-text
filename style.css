@@ -1,0 +1,179 @@
+:root {
+    --bg-1: #0a0a0a;
+    --bg-2: #1a1a1a;
+    --bg-3: #2a2a2a;
+    --bg-4: #333;
+    --t-1: #fff;
+    --t-2: #ccc;
+    --br: 0.2rem;
+}
+
+* {
+    outline: none !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-1);
+    margin: 0;
+    padding: 2rem;
+    width: calc(100vw - 4rem);
+    min-height: calc(100vh - 4rem);
+
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: var(--t-1);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    overflow-x: hidden;
+}
+
+.input, input{
+    background-color:var(--bg-2);
+    border: none;
+    padding: 0.75rem 1rem;
+    width: calc(100vw - 2 * (2rem + 1rem));
+    min-height: calc(0.75rem * 2 + 1ch);
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    overflow-x: auto;
+    border-radius: var(--br);
+    -webkit-border-radius: var(--br);
+    -moz-border-radius: var(--br);
+    -ms-border-radius: var(--br);
+    -o-border-radius: var(--br);
+}
+
+label {
+    white-space: nowrap;
+}
+
+.container{
+    background-color: var(--bg-2);
+    max-width: min-content;
+    overflow-x: auto;
+    display: flex;
+    border-radius: var(--br);
+    -webkit-border-radius: var(--br);
+    -moz-border-radius: var(--br);
+    -ms-border-radius: var(--br);
+    -o-border-radius: var(--br);
+    transition: background 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out;
+}
+
+.striped:hover {
+    background-color: var(--bg-1);
+}
+
+.padding {
+    padding: 0.75rem 1rem;
+    gap: 2rem;
+    align-items: center;
+    transition: background 1s ease-in-out;
+    -webkit-transition: background 1s ease-in-out;
+    -moz-transition: background 1s ease-in-out;
+    -ms-transition: background 1s ease-in-out;
+    -o-transition: background 1s ease-in-out;
+}
+
+.padding:hover {
+    background-color: #1a1a1a;
+    transition: background 1s ease-in-out;
+    -webkit-transition: background 1s ease-in-out;
+    -moz-transition: background 1s ease-in-out;
+    -ms-transition: background 1s ease-in-out;
+    -o-transition: background 1s ease-in-out;
+}
+
+.wrapper:nth-child(odd) {
+    background-color: var(--bg-2);
+    border-radius: var(--br);
+    -webkit-border-radius: var(--br);
+    -moz-border-radius: var(--br);
+    -ms-border-radius: var(--br);
+    -o-border-radius: var(--br);
+}
+
+.wrapper {
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1em;
+    min-height: 1.5em;
+
+    scroll-snap-type: x proximity;
+    padding: 0;
+}
+
+.letter {
+    padding: 0.3em 0;
+    scroll-snap-align: start;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+select, button, option {
+    font-size: 1.2rem;
+    padding: 1ch 1.5ch;
+    border: none;
+    color: var(--t-1);
+    border-radius: var(--br);
+    -webkit-border-radius: var(--br);
+    -moz-border-radius: var(--br);
+    -ms-border-radius: var(--br);
+    -o-border-radius: var(--br);
+    transition: background 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out;
+}
+
+select, option {
+    background-color: var(--bg-1);
+}
+
+select:active, button:active, option:active {
+    background-color: var(--bg-3);
+    color: var(--t-2);
+    transition: background 0.1s ease-in-out;
+    -webkit-transition: background 0.1s ease-in-out;
+    -moz-transition: background 0.1s ease-in-out;
+    -ms-transition: background 0.1s ease-in-out;
+    -o-transition: background 0.1s ease-in-out;
+}
+
+.size-manager {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+input[type="range"] {
+    margin: 0 1rem;
+}
+
+@media only screen and (min-width: 1920px) {
+    .size-manager {
+        flex-direction: row;
+    }
+}
